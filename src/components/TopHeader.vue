@@ -4,7 +4,7 @@
         <span v-if="loggedIn">Yes</span>
         <span v-else>No</span>
         <div>
-            <button @click="signOut()" class="btn btn-secondary">Sign Out</button>
+            <button  v-if="loggedIn" @click="signOut()" class="btn btn-secondary">Sign Out</button>
         </div>
     </div>
 </template>
@@ -14,9 +14,9 @@ import * as firebase from "firebase/app";
 import "firebase/auth";
 export default {
     created() {
-        firebase.auth().onAuthStateChanged(user=> {
+        firebase.auth().onAuthStateChanged(val=> {
             //this.loggedIn = !!user;
-            if(user) {
+            if(val) {
                 this.loggedIn = true;
             }
             else {
@@ -43,3 +43,9 @@ export default {
     }
 }
 </script>
+
+<style scoped>
+.btn {
+    color: black;
+}
+</style>

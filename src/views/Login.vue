@@ -43,7 +43,7 @@
 
         <div class="form-group">
           <button
-            @click="pressed()"
+            @click="logIn()"
             type="submit"
             class="btn btn-primary btn-lg"
           >
@@ -73,7 +73,7 @@ export default {
     };
   },
   methods: {
-    async pressed() {
+    async logIn() {
       try {
         if (this.email != "" && this.password != "") {
           const val = await firebase

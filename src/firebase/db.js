@@ -1,10 +1,4 @@
 import firebase from "firebase/app";
-import axios from "axios";
-import Vue from 'vue'
-
-
-Vue.prototype.$axios = axios;
-
 
  // Your web app's Firebase configuration
  const firebaseConfig = {
