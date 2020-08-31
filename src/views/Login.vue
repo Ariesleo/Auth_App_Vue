@@ -30,7 +30,7 @@
               </span>
             </div>
             <input
-              type="text"
+              type="password"
               class="form-control"
               name="password"
               v-model="password"
@@ -47,7 +47,7 @@
             type="submit"
             class="btn btn-primary btn-lg"
           >
-            Sign Ip
+            LogIn
           </button>
         </div>
 

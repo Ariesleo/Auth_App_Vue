@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <TopHeader />
     <div id="nav">
       <router-link to="/about">About</router-link> |
       <router-link to="/login">Login</router-link> |
@@ -9,6 +10,15 @@
     <router-view/>
   </div>
 </template>
+
+<script>
+import TopHeader from "./components/TopHeader.vue";
+export default {
+  components: {
+    TopHeader
+  }
+}
+</script>
 
 <style lang="scss">
 #app {

@@ -30,7 +30,7 @@
               </span>
             </div>
             <input
-              type="text"
+              type="password"
               class="form-control"
               name="password"
               v-model="password"
