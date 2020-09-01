@@ -51,6 +51,16 @@
           </button>
         </div>
 
+        <div class="form-group">
+          <button
+          @click="googlelogIn()"
+            type="submit"
+            class="btn btn-primary btn-lg"
+          >
+            GoogleLogIn
+          </button>
+        </div>
+
         <div class="text-center">
           Dont't have an account?
           <router-link to="/register">Back to Register!</router-link>
@@ -75,7 +85,7 @@ export default {
   methods: {
     async logIn() {
       try {
-        if (this.email != "" && this.password != "") {
+        if (this.email !== "" && this.password !== "") {
           const val = await firebase
             .auth()
             .signInWithEmailAndPassword(this.email, this.password);
@@ -88,6 +98,13 @@ export default {
         }
       } catch (err) {
         console.log(err);
+      }
+    },
+    async googlelogIn() {
+      var provider = await new firebase.auth.GoogleAuthProvider();
+      var walaa = firebase.auth().signInWithPopup(provider);
+      if (walaa) {
+        this.$router.replace({ name: "secret" });
       }
     },
   },
