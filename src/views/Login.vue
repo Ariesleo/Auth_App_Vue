@@ -102,10 +102,7 @@ export default {
     },
     async googlelogIn() {
       var provider = await new firebase.auth.GoogleAuthProvider();
-      var walaa = firebase.auth().signInWithPopup(provider);
-      if (walaa) {
-        this.$router.replace({ name: "secret" });
-      }
+      firebase.auth().signInWithPopup(provider);
     },
   },
 };
