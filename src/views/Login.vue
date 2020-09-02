@@ -56,8 +56,18 @@
           @click="googlelogIn()"
             type="submit"
             class="btn btn-primary btn-lg"
-          >
+          ><i class="fa fa-google"></i>
             GoogleLogIn
+          </button>
+        </div>
+
+        <div class="form-group">
+          <button
+          @click="facebooklogIn()"
+            type="submit"
+            class="btn btn-primary btn-lg"
+          ><i class="fa fa-facebook"></i>
+            facebook LogIn
           </button>
         </div>
 
@@ -101,9 +111,13 @@ export default {
       }
     },
     async googlelogIn() {
-      var provider = await new firebase.auth.GoogleAuthProvider();
+      const provider = await new firebase.auth.GoogleAuthProvider();
       firebase.auth().signInWithPopup(provider);
     },
+    facebooklogIn() {
+      const provider = new firebase.auth.FacebookAuthProvider();
+      firebase.auth().signInWithPopup(provider)
+    }
   },
 };
 </script>
