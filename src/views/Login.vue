@@ -57,6 +57,7 @@
             type="submit"
             class="btn btn-primary btn-lg"
           ><i class="fa fa-google"></i>
+          <b-icon icon="lock"></b-icon>
             GoogleLogIn
           </button>
         </div>
@@ -112,11 +113,13 @@ export default {
     },
     async googlelogIn() {
       const provider = await new firebase.auth.GoogleAuthProvider();
-      firebase.auth().signInWithPopup(provider);
+      firebase.auth().signInWithPopup(provider).then( () =>{
+        this.$router.replace({ name: "secret" });
+      });
     },
     facebooklogIn() {
       const provider = new firebase.auth.FacebookAuthProvider();
-      firebase.auth().signInWithPopup(provider)
+      firebase.auth().signInWithPopup(provider);
     }
   },
 };

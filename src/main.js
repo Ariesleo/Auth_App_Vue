@@ -2,12 +2,14 @@ import Vue from 'vue'
 import App from './App.vue'
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
+import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue'
 import router from './router'
 import store from './store'
 import axios from "axios";
 import firebase from "firebase/app";
 
-
+Vue.use(BootstrapVue);
+Vue.use(BootstrapVueIcons);
 Vue.prototype.$axios = axios;
 Vue.config.productionTip = false
 
