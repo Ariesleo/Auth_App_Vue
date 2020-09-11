@@ -8,7 +8,8 @@
             <P>Image_URL: {{ user_photoUrl }}</P>
             <p>Email_Verification: {{ emailVerified }}</p>
             <p>Email_ID: {{ uid }}</p>
-            <img v-bind:src="user_photoUrl" width="100" height="100"/>
+            <img v-bind:src="user_photoUrl" width="100" height="100"/><br>
+            <img v-bind:src="user_photoUrl" width="46" height="46" style=" border-radius: 50%;"/>
         </div>
     </div>
 </template>

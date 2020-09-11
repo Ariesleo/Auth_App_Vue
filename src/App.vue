@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <TopNav />
     <TopHeader />
     <div id="nav">
       <router-link to="/">Home</router-link> |
@@ -14,9 +15,11 @@
 
 <script>
 import TopHeader from "./components/TopHeader.vue";
+import TopNav from "./components/TopNav.vue";
 export default {
   components: {
-    TopHeader
+    TopHeader,
+    TopNav
   }
 }
 </script>
