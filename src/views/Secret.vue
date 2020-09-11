@@ -9,8 +9,6 @@
             <p>Email_Verification: {{ emailVerified }}</p>
             <p>Email_ID: {{ uid }}</p>
             <img v-bind:src="user_photoUrl" width="100" height="100"/>
-            <b-icon-exclamation-triangle-fill></b-icon-exclamation-triangle-fill>
-            <b-icon icon="lock"></b-icon>
         </div>
     </div>
 </template>
