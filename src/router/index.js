@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
 import Secret from '../views/Secret.vue'
+import TopNavv from '../components/TopNavv.vue'
 
 import * as firebase from "firebase/app";
 import "firebase/auth";
@@ -42,6 +43,11 @@ Vue.use(VueRouter)
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue'),
     meta: {requiresAuth: true }
+  },
+  {
+    path: '/top',
+    name: 'Top',
+    component: TopNavv
   }
 ]
 
