@@ -1,4 +1,5 @@
 <template>
+<div>
   <nav class="navbar navbar-expand-lg navbar-dark">
     <a class="navbar-brand" href="#">Welcome Navbar</a>
     <!--below for collapsable button-->
@@ -18,13 +19,12 @@
       <ul class="navbar-nav mr-auto"></ul>
       <form class="form-inline my-2 my-lg-0">
         <input
-          class="form-control mr-sm-2"
-          type="search"
-          placeholder="Search"
-          aria-label="Search"
+            class="form-control my-0 py-1 red-border"
+            type="text"
+            placeholder="Search"
+            aria-label="Search"
         />
-        
-        <li class="nav-item dropdown">
+        <div class="nav-item dropdown">
           <a
             class="nav-link dropdown-toggle"
             href="#"
@@ -48,16 +48,26 @@
                 <button class="btn btn-secondary">SignOut</button>
             </div>
           </div>
-        </li>
+        </div>
       </form>
     </div>
   </nav>
+
+  <div>
+      <nav class="navbar navbar-expand-lg navbar-dark">
+
+      </nav>
+  </div>
+</div>
 </template>
 
 <style scoped>
 .navbar {
   padding: 2px 20px 2px 20px;
   background-color: #5840BB;
+}
+.navbar-brand {
+    margin-left: 50px;
 }
 .navimg {
     border-radius: 50%;
