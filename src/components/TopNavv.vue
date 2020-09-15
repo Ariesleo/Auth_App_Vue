@@ -52,12 +52,6 @@
       </form>
     </div>
   </nav>
-
-  <div>
-      <nav class="navbar navbar-expand-lg navbar-dark">
-
-      </nav>
-  </div>
 </div>
 </template>
 
@@ -104,4 +98,6 @@ p {
 .card button {
     margin: auto;
 }
+
+/* Working On SIDEBAR */
 </style>
