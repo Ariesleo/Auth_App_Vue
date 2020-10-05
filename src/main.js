@@ -9,6 +9,7 @@ import axios from "axios";
 import firebase from "firebase/app";
 import {firestorePlugin} from 'vuefire';
 import Vuetify from 'vuetify';
+import vuetify from './plugins/vuetify';
 
 Vue.use(Vuetify);
 Vue.use(firestorePlugin);
@@ -17,7 +18,7 @@ Vue.use(BootstrapVueIcons);
 Vue.prototype.$axios = axios;
 Vue.config.productionTip = false
 
- // Your web app's Firebase configuration
+// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCccNdEgml7xg5iz_YhF6AAR4TTMqKrVuo",
   authDomain: "auth-app-8af52.firebaseapp.com",
@@ -43,6 +44,7 @@ firebase.auth().onAuthStateChanged(user=> {
     app = new Vue({
       router,
       store,
+      vuetify,
       render: h => h(App)
     }).$mount('#app')
   }
