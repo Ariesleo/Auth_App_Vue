@@ -1,5 +1,5 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
-  </div>
+  <v-btn
+  elevation="24" color="primary"
+>Click Me</v-btn>
 </template>

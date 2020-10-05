@@ -8,8 +8,9 @@ import store from './store';
 import axios from "axios";
 import firebase from "firebase/app";
 import {firestorePlugin} from 'vuefire';
+import Vuetify from 'vuetify';
 
-
+Vue.use(Vuetify);
 Vue.use(firestorePlugin);
 Vue.use(BootstrapVue);
 Vue.use(BootstrapVueIcons);
