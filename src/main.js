@@ -10,6 +10,7 @@ import firebase from "firebase/app";
 import {firestorePlugin} from 'vuefire';
 import Vuetify from 'vuetify';
 import vuetify from './plugins/vuetify';
+import PrismicVue from '@prismicio/vue';
 
 Vue.use(Vuetify);
 Vue.use(firestorePlugin);
@@ -17,6 +18,10 @@ Vue.use(BootstrapVue);
 Vue.use(BootstrapVueIcons);
 Vue.prototype.$axios = axios;
 Vue.config.productionTip = false
+	
+Vue.use(PrismicVue, {
+  endpoint: "https://your-repo-name.cdn.prismic.io/api/v2",
+});
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
