@@ -1,7 +1,7 @@
 <template>
   <v-card
     :loading="loading"
-    class="mx-auto my-12"
+    class="mx-auto my-12 blue-grey darken-4 yellow--text"
     max-width="374"
   >
     <template slot="progress">
