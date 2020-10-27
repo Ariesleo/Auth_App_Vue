@@ -1,30 +1,32 @@
-<!-- Vue Template HTML Markup -->
-
 <template>
-<v-container>
-  <v-menu>
-    <template v-slot:activator="{ on, attrs }">
-      <v-btn
-        v-bind="attrs"
-        v-on="on"
-      >
-        Click me
-      </v-btn>
-    </template>
-
-    <v-list>
-      <v-list-item>
-        <v-list-item-title>Option 1</v-list-item-title>
-      </v-list-item>
-
-      <v-list-item>
-        <v-list-item-title>Option 2</v-list-item-title>
-      </v-list-item>
-
-      <v-list-item>
-        <v-list-item-title>Option 3</v-list-item-title>
-      </v-list-item>
-    </v-list>
-  </v-menu>
-</v-container>
+  <v-form>
+    <v-container>
+      <v-row>
+        <v-col cols="12" md="4">
+          <v-text-field v-model="firstname" label="First name"></v-text-field>
+        </v-col>
+      </v-row>
+      <v-row justify="center">
+        <v-btn @click="added()">Submit</v-btn>
+      </v-row>
+    </v-container>
+  </v-form>
 </template>
+
+<script>
+import * as firebase from "firebase/app";
+export default {
+  data() {
+    return {
+      firstname: '',
+    };
+  },
+  methods: {
+    added() {
+      const databaseRef = firebase.database().ref("users");
+      databaseRef.push(this.firstname);
+      this.firstname = '';
+    },
+  },
+};
+</script>
