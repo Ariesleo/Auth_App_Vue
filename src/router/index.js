@@ -6,6 +6,7 @@ import Register from '../views/Register.vue'
 import Secret from '../views/Secret.vue'
 import TopNavv from '../components/TopNavv.vue'
 import TopNav from '../components/TopNav.vue'
+import Uploadfile from '../views/Uploadfile.vue'
 
 import * as firebase from "firebase/app";
 import "firebase/auth";
@@ -29,6 +30,11 @@ Vue.use(VueRouter)
     path: '/topnav',
     name: 'topnav',
     component: TopNav
+  },
+  {
+    path: '/upload',
+    name: 'uploadfile',
+    component: Uploadfile
   },
   {
     path: '/register',
