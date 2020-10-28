@@ -3,30 +3,34 @@
     <v-container>
       <v-row>
         <v-col cols="12" md="4">
-          <v-text-field v-model="firstname" label="First name"></v-text-field>
+          <v-text-field v-model="name" label="name"></v-text-field>
         </v-col>
       </v-row>
-      <v-row justify="center">
-        <v-btn @click="added()">Submit</v-btn>
+      <v-row>
+        <v-btn @click="add()">add</v-btn>
       </v-row>
     </v-container>
   </v-form>
 </template>
 
 <script>
-import * as firebase from "firebase/app";
+import * as firebase from 'firebase/app';
+
+//export const dataRef = firebase.database();
+
 export default {
   data() {
     return {
-      firstname: '',
-    };
+      name: ''
+    }
   },
   methods: {
-    added() {
-      const databaseRef = firebase.database().ref("users");
-      databaseRef.push(this.firstname);
-      this.firstname = '';
-    },
-  },
-};
+    add() {
+      firebase.database().ref().child('users').set({
+        username: this.name
+      });
+      // this.name = '';
+    }
+  }
+}
 </script>
