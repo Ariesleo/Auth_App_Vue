@@ -2,7 +2,12 @@
   <div>
     <nav class="navbar navbar-expand-lg navbar-dark">
       <a class="navbar-brand" href="#">Welcome Navbar</a>
-      <v-switch v-model="cycle" label="Cycle Slides" inset></v-switch>
+      <v-switch @click="themeFun" v-model="cycle" :label="`Dark Theme: ${cycle.toString()}`" inset></v-switch>
+      <v-divider vertical></v-divider>
+      <v-switch
+      v-model="switch1"
+      :label="`Switch 1: ${switch1.toString()}`"
+    ></v-switch>
       <!--below for collapsable button-->
       <button
         class="navbar-toggler"
@@ -64,6 +69,26 @@
     </nav>
   </div>
 </template>
+
+<script>
+  export default {
+    data () {
+      return {
+        switch1: true,
+        cycle: true,
+      }
+    },
+    methods: {
+      themeFun() {
+        if (this.cycle === true) {
+          this.$vuetify.theme.dark = true;
+        } else {
+          this.$vuetify.theme.dark = false;
+        }
+      }
+    },
+  }
+</script>
 
 <style scoped>
 .navbar {
