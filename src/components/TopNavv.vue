@@ -2,12 +2,19 @@
   <div>
     <nav class="navbar navbar-expand-lg navbar-dark">
       <a class="navbar-brand" href="#">Welcome Navbar</a>
-      <v-switch @click="themeFun" v-model="cycle" :label="`Dark Theme: ${cycle.toString()}`" inset></v-switch>
       <v-divider vertical></v-divider>
+      <v-spacer></v-spacer>
+      <!-- globally theme change garidinxa -->
+      <v-switch @click="themeFun" v-model="cycle" :label="`Dark Theme: ${cycle.toString()}`" inset></v-switch>
+      <!-- locally theme change garidinxa -->
       <v-switch
-      v-model="switch1"
-      :label="`Switch 1: ${switch1.toString()}`"
-    ></v-switch>
+        v-model="$vuetify.theme.dark"
+        hint="This toggles the global state of the Vuetify theme"
+        inset
+        color="orange"
+        label="Vuetify Theme Dark"
+        persistent-hint
+      ></v-switch>
       <!--below for collapsable button-->
       <button
         class="navbar-toggler"
