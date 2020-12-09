@@ -7,6 +7,7 @@ import Secret from '../views/Secret.vue'
 import TopNavv from '../components/TopNavv.vue'
 import TopNav from '../components/TopNav.vue'
 import Uploadfile from '../views/Uploadfile.vue'
+import LifecycleHooks from '../views/LifecycleHooks'
 
 import * as firebase from "firebase/app";
 import "firebase/auth";
@@ -30,6 +31,11 @@ Vue.use(VueRouter)
     path: '/topnav',
     name: 'topnav',
     component: TopNav
+  },
+  {
+    path: '/hooks',
+    name: 'lifecycle',
+    component: LifecycleHooks
   },
   {
     path: '/upload',

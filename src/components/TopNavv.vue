@@ -6,7 +6,7 @@
       <v-spacer></v-spacer>
       <!-- globally theme change garidinxa -->
       <v-switch @click="themeFun" v-model="cycle" :label="`Dark Theme: ${cycle.toString()}`" inset></v-switch>
-      <!-- locally theme change garidinxa -->
+      <!--MORE EFFICIENT gobally theme change garidinxa -->
       <v-switch
         v-model="$vuetify.theme.dark"
         hint="This toggles the global state of the Vuetify theme"
