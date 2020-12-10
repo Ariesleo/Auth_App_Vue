@@ -42,30 +42,30 @@ export default {
             this.lists.pop();
         }
     },
-    beforeCreate() {
-        alert('beforeCreate');
-    },
-    created() {
-        alert('created');
-    },
-    beforeMount() {
-        alert('beforeMount');
-    },
-    mounted() {
-        alert('mounted')
-    },
-    beforeUpdate() {
-        alert('beforeUpdate');
-    },
-    updated() {
-        alert('updated');
-    },
-    beforeDestroy() {
-        alert('are you sure to delete');
-    },
-    destroyed() {
-        alert('destroyed');
-    },
+    // beforeCreate() {
+    //     alert('beforeCreate');
+    // },
+    // created() {
+    //     alert('created');
+    // },
+    // beforeMount() {
+    //     alert('beforeMount');
+    // },
+    // mounted() {
+    //     alert('mounted')
+    // },
+    // beforeUpdate() {
+    //     alert('beforeUpdate');
+    // },
+    // updated() {
+    //     alert('updated');
+    // },
+    // beforeDestroy() {
+    //     alert('are you sure to delete');
+    // },
+    // destroyed() {
+    //     alert('destroyed');
+    // },
     
 }
 </script>
