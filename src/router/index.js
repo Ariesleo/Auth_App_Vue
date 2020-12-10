@@ -8,6 +8,7 @@ import TopNavv from '../components/TopNavv.vue'
 import TopNav from '../components/TopNav.vue'
 import Uploadfile from '../views/Uploadfile.vue'
 import LifecycleHooks from '../views/LifecycleHooks'
+import FeedbackForm from '../views/FeedbackForm.vue';
 
 import * as firebase from "firebase/app";
 import "firebase/auth";
@@ -36,6 +37,11 @@ Vue.use(VueRouter)
     path: '/hooks',
     name: 'lifecycle',
     component: LifecycleHooks
+  },
+  {
+    path: '/feedbackform',
+    name: 'feedbackform',
+    component: FeedbackForm,
   },
   {
     path: '/upload',
